@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b380e101-4f54-4c09-b7de-82228265ca6b" name="Default Changelist" comment="" />
+    <list default="true" id="b380e101-4f54-4c09-b7de-82228265ca6b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -17,6 +24,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -124,14 +134,18 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1jqBHsvLTkMZ3KA1dWBmPNf9Roe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -149,10 +163,41 @@
       <option name="presentableId" value="Default" />
       <updated>1604521659005</updated>
       <workItem from="1604521668096" duration="1596000" />
+      <workItem from="1604524002224" duration="11866000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="389" y="154" key="#Log_Highlighting_(ideolog)" timestamp="1604581821615">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="389" y="154" key="#Log_Highlighting_(ideolog)/0.0.1366.768@0.0.1366.768" timestamp="1604581821615" />
+    <state x="275" y="42" width="1057" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604578531392">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="42" width="1057" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1604578531392" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1604572825431">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.768@0.0.1366.768" timestamp="1604572825431" />
+    <state x="502" y="106" key="NewPhpClassDialog" timestamp="1604574576588">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="502" y="106" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1604574576588" />
+    <state x="518" y="307" key="NewPhpFileDialog" timestamp="1604574559626">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="518" y="307" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1604574559626" />
+    <state x="541" y="271" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604579673157">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="541" y="271" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.768@0.0.1366.768" timestamp="1604579673157" />
+    <state x="0" y="0" width="585" height="768" key="find.popup" timestamp="1604572393155">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="0" y="0" width="585" height="768" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1604572393155" />
   </component>
 </project>
