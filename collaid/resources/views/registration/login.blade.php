@@ -13,11 +13,11 @@
 <form method="post" action="login.blade.php">
     <?php include('errors.blade.php'); ?>
     <div class="input-group">
-        <label>Nickname</label>
+        <label>Nickname:</label>
         <input type="text" name="nickname" >
     </div>
     <div class="input-group">
-        <label>Password</label>
+        <label>Password:</label>
         <input type="password" name="password">
     </div>
     <div class="input-group">

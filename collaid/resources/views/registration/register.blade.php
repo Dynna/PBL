@@ -10,43 +10,43 @@
     <h2>Register</h2>
 </div>
 
-<form method="post" action="register.blade.php">
+<form name="registration" method="post" action="register.blade.php">
     <?php include('errors.blade.php'); ?>
     <div class="input-group">
-        <label>First Name</label>
+        <label>First Name:</label>
         <input type="text" name="first_name">
     </div>
         <div class="input-group">
-            <label>Last Name</label>
+            <label>Last Name:</label>
             <input type="text" name="last_name">
         </div>
     <div class="input-group">
-        <label>Email</label>
+        <label>E-mail:</label>
         <input type="email" name="email">
     </div>
 
         <div class="input-group">
-            <label>Date of Birth</label>
+            <label>Date of Birth:</label>
             <input type="date" name="date_of_birth">
         </div>
 
         <div class="input-group">
-            <label>Nickname</label>
+            <label>Nickname (must be unique):</label>
             <input type="text" name="nickname">
         </div>
 
         <div class="input-group">
-            <label>Provided Service</label>
+            <label>Provided Service (main job you are good at):</label>
             <input type="text" name="provided_service">
         </div>
 
         <div class="input-group">
-            <label>Biography</label>
-            <input type="text" name="bio">
+            <label>Bio:</label>
+            <textarea rows="4" cols="54" placeholder="Enter your bio here..." name="bio" form="registration"></textarea>
         </div>
 
     <div class="input-group">
-        <label>Password</label>
+        <label>Password:</label>
         <input type="password" name="password">
     </div>
     <div class="input-group">
