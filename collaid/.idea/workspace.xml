@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b380e101-4f54-4c09-b7de-82228265ca6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/registration/errors.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/registration/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/registration/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/registration/server_login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/registration/server_reg.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/registration/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/registration/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -144,9 +150,15 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/registration" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PBL\collaid\resources\views\registration" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -163,7 +175,9 @@
       <option name="presentableId" value="Default" />
       <updated>1604521659005</updated>
       <workItem from="1604521668096" duration="1596000" />
-      <workItem from="1604524002224" duration="11866000" />
+      <workItem from="1604524002224" duration="14753000" />
+      <workItem from="1604737160158" duration="2202000" />
+      <workItem from="1605090247613" duration="10052000" />
     </task>
     <servers />
   </component>
@@ -187,10 +201,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="502" y="106" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1604574576588" />
-    <state x="518" y="307" key="NewPhpFileDialog" timestamp="1604574559626">
+    <state x="518" y="307" key="NewPhpFileDialog" timestamp="1605099736130">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="518" y="307" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1604574559626" />
+    <state x="518" y="307" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1605099736130" />
     <state x="541" y="271" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604579673157">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
