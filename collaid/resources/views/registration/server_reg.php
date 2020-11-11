@@ -76,8 +76,24 @@ if (isset($_POST['reg_user'])) {
         array_push($errors, "Nickname is required");
     }
     if (empty($password)) {
-        array_push($errors, "Password is required");
-    }
+        array_push($errors, "Password is required");}
+        else{
+            $password = test_input($_POST["password"]);
+
+            if (strlen($_POST["password"]) <= '8') {
+                array_push($errors, "Your password must contain al least 8 characters");
+            }
+            if(!preg_match("#[0-9]+#",$password)) {
+                array_push($errors, "Your password must contain at least 1 number");
+            }
+            if(!preg_match("#[A-Z]+#",$password)) {
+                array_push($errors, "Your password must contain at least 1 capital letter");
+            }
+            if(!preg_match("#[a-z]+#",$password)) {
+                array_push($errors, "Your password must contain at least 1 lowercase latter");
+            }
+        }
+
 
     // first check the database to make sure
     // a user does not already exist with the same username and/or email
