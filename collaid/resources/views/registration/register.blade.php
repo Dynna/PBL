@@ -10,11 +10,12 @@
     <h2>Register</h2>
 </div>
 
-<form name="registration" method="post" action="register.blade.php">
+<form name="registration" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <?php include('errors.blade.php'); ?>
     <div class="input-group">
         <label>First Name:</label>
         <input type="text" name="first_name">
+
     </div>
         <div class="input-group">
             <label>Last Name:</label>

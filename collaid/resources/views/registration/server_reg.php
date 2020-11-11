@@ -44,12 +44,30 @@ if (isset($_POST['reg_user'])) {
     // by adding (array_push()) corresponding error unto $errors array
     if (empty($first_name)) {
         array_push($errors, "First Name is required");
+    } else {
+        $first_name = test_input($_POST["first_name"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z-' ]*$/", $first_name)) {
+            array_push($errors, "Only letters and white space allowed for first name!");
+        }
     }
     if (empty($last_name)) {
         array_push($errors, "Last Name is required");
+    } else {
+        $last_name = ($_POST["last_name"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z-' ]*$/", $last_name)) {
+            array_push($errors, "Only letters and white space allowed for last name!");
+        }
     }
     if (empty($email)) {
         array_push($errors, "Email is required");
+    } else {
+        $email = ($_POST["email"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            array_push($errors, "Invalid e-mail format!");
+        }
     }
     if (empty($date_of_birth)) {
         array_push($errors, "Date of birth is required");
@@ -89,6 +107,13 @@ if (isset($_POST['reg_user'])) {
         $_SESSION['success'] = "You are now logged in";
         header('location: welcome.blade.php');
     }
+}
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 session_write_close();
 
