@@ -1,12 +1,4 @@
 <?php
-
-/**
- * Laravel - A PHP Framework For Web Artisans
- *
- * @package  Laravel
- * @author   Taylor Otwell <taylor@laravel.com>
- */
-
 $uri = urldecode(
     parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
 );
@@ -18,11 +10,7 @@ if ($uri !== '/' && file_exists(__DIR__.'/resources'.$uri)) {
     return false;
 }
 
-//require_once __DIR__.'/public/index.php';
 require_once __DIR__.'/register.blade.php';
-//require_once __DIR__.'/login.blade.php';
-
-
 
 session_start();
 
@@ -103,37 +91,9 @@ if (isset($_POST['reg_user'])) {
     }
 }
 session_write_close();
-//
-//session_start();
-//
-////Login
-//if (isset($_POST['login_user'])) {
-//    $username = mysqli_real_escape_string($db, $_POST['nickname']);
-//    $password = mysqli_real_escape_string($db, $_POST['password']);
-//
-//    if (empty($nickname)) {
-//        array_push($errors, "Nickname is required");
-//    }
-//    if (empty($password)) {
-//        array_push($errors, "Password is required");
-//    }
-//
-//    if (count($errors) == 0) {
-//        $password = md5($password);
-//        $query = "SELECT * FROM account WHERE nickname='$nickname' AND password='$password'";
-//        $results = mysqli_query($db, $query);
-//        if (mysqli_num_rows($results) == 1) {
-//            $_SESSION['nickname'] = $nickname;
-//            $_SESSION['success'] = "You are now logged in";
-//            header('location: welcome.blade.php');
-//        }else {
-//            array_push($errors, "Wrong nickname/password combination");
-//        }
-//    }
-//}
-//session_write_close();
 
 $db->close();
+
 
 
 
