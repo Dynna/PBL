@@ -1,8 +1,8 @@
 ## Collaid main page font
 
 ### Link
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link1 rel="preconnect" href="https://fonts.gstatic.com">
+<link1 href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
 ### Import
 <style>
