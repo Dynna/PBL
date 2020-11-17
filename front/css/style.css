@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 16px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+
+}
+
+.logo {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 2.5em;
+}
+
+.nav {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .menu {
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 36%;
+}
+
+.nav ul {  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.875em;
+}
+
+.nav ul a:active {
+    color: rgb(0, 179, 179);
+}
+
+.nav ul a:hover {
+    color: rgb(0, 179, 179);
+}
+.login {
+    font-size: 0.875em;
+}
+
+.login:hover {
+    color: rgb(0, 179, 179);
+}
+
+.nav .account {
+    margin-left: auto;
+}
+
+.welcome {
+    height: 355px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 4.5em;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.welcome p {
+    font-size: 1.25;
+}
+
+.img-preview {
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+.info-blocks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.block {
+    height: 420px;
+    width: 55%;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-blocks h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.info-blocks h4 {
+    font-size: 1.25em;
+    font-weight: 100;
+    color: rgb(0 0 0 / 80%)
+}
+
+.info-blocks p {
+    font-size: 0.938em;
+    line-height: 1.875em;
+    color: rgb(0 0 0 / 70%);
+}
+
+.img-preview-2 {
+    position: relative;
+    text-align: center;
+}
+
+.quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+}
+
+.quote address {
+    color: white;
+    margin-top: 20px;
+}
+
+footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+footer p {
+    font-size: 0.8em;
+    color: rgb(0 0 0 / 60%);
+}
+
