@@ -3,34 +3,49 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="profilepage.css">
+    <link rel="stylesheet" href="./css/profilepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Profile</title>
 </head>
 <body>
+<header>
+    <div class="main-container">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-preview"><a href="#">COLLAID</a></div>
+            </div>
+            <div class="nav">
+                <div class="menu">
+                    <ul class="list-menu">
+                        <li class="item active"><a  href="index.html">Home</a></li>
+                        <li class="item"><a href="#">Posts</a></li>
+                        <li class="item"><a href="#">Messages</a></li>
+                        <li class="item"><a href="#">Favorites</a></li>
+                    </ul>
+                </div>
+                <div class="account">
+                    <span><i class="far fa-user-circle"></i></span>
+                    <a class="login" href="#">Log in</a>
+                </div>
+            </div>
+         </div>
+    </div>
+</header>
+
     <div class="container-main">
-
         <div class="space-left"></div>
-
         <div class="container-profile-menu">
-
             <div class="menu-avatar">
-
                 <div class="user-avatar">
-
                     <div class="avatar-place">
                             <img src="http://via.placeholder.com/95x95" style="border-radius:50%" />
                             <input type="file" id="myfile" style="display:none" />
                     </div>
-
                 </div>
-
                 <div class="user-name">
                     User Name
                 </div>
-
                 <div class="user-friends">
-
                     <div class="user-friends-followers">
                         <div class="user-friends-followers-number">
                             0
@@ -38,9 +53,7 @@
                         <div class="user-friends-followers-text">
                             Followers
                         </div>
-
                     </div>
-
                     <div class="user-friends-following">
                         <div class="user-friends-following-number">
                             0
@@ -50,15 +63,11 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="user-edit-button">
                     <button class="edit-button">Edit</button>
                 </div>
-
             </div>
-
             <div class="menu-space"></div>
-
             <div class="menu-choice">
                 <div class="profile-choice">
                     Profile
@@ -73,25 +82,18 @@
                     Friends
                 </div>
             </div>
-
         </div>
-
-
         <div class="service-display">
-
             <div class="section-name">
                 <p>My Account</p>
             </div>
-
             <div class="section-info">
                 <p>View and edit your personal info below.</p>
             </div>
-
             <div class="section-email">
                 <p>Login Email:</p>
                 <p>sickofthis@gmail.com</p>
             </div>
-
             <div class="section-profile-name">
                 <div class="section-first-name">
                         <label for="firstname">First Name</label>
@@ -99,7 +101,6 @@
                             <input type="text" id="fname" name="fname" value="User"><br>
                         </form>
                 </div>
-
                 <div class="section-last-name">
                     <label for="lastname">Last Name</label>
                     <form action="/action_page.php">
@@ -107,7 +108,6 @@
                     </form>
                 </div>
             </div>
-
             <div class="section-profile-utilities">
                 <div class="section-profile-utilities-email">
                     <label for="email">Email</label>
@@ -122,16 +122,15 @@
                     </form>
                 </div>
             </div>
-
             <div class="section-save-button">
                 <button class="save-button">Update Info</button>
             </div>
-
-
         </div>
-
         <div class="space-right"></div>
-
     </div>
+
+    <footer>
+    <p>&copy; 2020 by Collaid. Proudly created by Team 'Connected'. </p>
+</footer>
 </body>
 </html>
