@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="profilepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="container-main">
+
+        <div class="space-left"></div>
+
+        <div class="container-profile-menu">
+
+            <div class="menu-avatar">
+
+                <div class="user-avatar">
+
+                    <div class="avatar-place">
+                            <img src="http://via.placeholder.com/95x95" style="border-radius:50%" />
+                            <input type="file" id="myfile" style="display:none" />
+                    </div>
+
+                </div>
+
+                <div class="user-name">
+                    User Name
+                </div>
+
+                <div class="user-friends">
+
+                    <div class="user-friends-followers">
+                        <div class="user-friends-followers-number">
+                            0
+                        </div>
+                        <div class="user-friends-followers-text">
+                            Followers
+                        </div>
+
+                    </div>
+
+                    <div class="user-friends-following">
+                        <div class="user-friends-following-number">
+                            0
+                        </div>
+                        <div class="user-friends-following-text">
+                            Following
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-edit-button">
+                    <button class="edit-button">Edit</button>
+                </div>
+
+            </div>
+
+            <div class="menu-space"></div>
+
+            <div class="menu-choice">
+                <div class="profile-choice">
+                    Profile
+                </div>
+                <div class="new-post-choice">
+                    Add a new post
+                </div>
+                <div class="posts-choice">
+                    My posts
+                </div>
+                <div class="friends-choice">
+                    Friends
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="service-display">
+
+            <div class="section-name">
+                <p>My Account</p>
+            </div>
+
+            <div class="section-info">
+                <p>View and edit your personal info below.</p>
+            </div>
+
+            <div class="section-email">
+                <p>Login Email:</p>
+                <p>sickofthis@gmail.com</p>
+            </div>
+
+            <div class="section-profile-name">
+                <div class="section-first-name">
+                        <label for="firstname">First Name</label>
+                        <form action="/action_page.php">
+                            <input type="text" id="fname" name="fname" value="User"><br>
+                        </form>
+                </div>
+
+                <div class="section-last-name">
+                    <label for="lastname">Last Name</label>
+                    <form action="/action_page.php">
+                        <input type="text" id="lname" name="lname" value="Name"><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="section-profile-utilities">
+                <div class="section-profile-utilities-email">
+                    <label for="email">Email</label>
+                    <form action="/action_page.php">
+                        <input type="text" id="email" name="email" value="sickofthis@gmail.com"><br>
+                    </form>
+                </div>
+                <div class="section-profile-utilities-password">
+                    <label for="password">Password</label>
+                    <form action="/action_page.php">
+                        <input type="text" id="password" name="password" value=""><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="section-save-button">
+                <button class="save-button">Update Info</button>
+            </div>
+
+
+        </div>
+
+        <div class="space-right"></div>
+
+    </div>
+</body>
+</html>
