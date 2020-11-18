@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b380e101-4f54-4c09-b7de-82228265ca6b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/registration/server_reg.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/registration/server_reg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registration/errors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registration/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registration/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/registration/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registration/server_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/server_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registration/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registration/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,12 +166,16 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/registration" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Login_CSRF/Login_CSRF" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PBL\collaid\resources\views" />
+      <recent name="C:\xampp\htdocs\PBL\collaid\resources\views\login" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\PBL\collaid\resources\views\registration" />
     </key>
@@ -187,6 +198,8 @@
       <workItem from="1604524002224" duration="14753000" />
       <workItem from="1604737160158" duration="2202000" />
       <workItem from="1605090247613" duration="14069000" />
+      <workItem from="1605527192955" duration="279000" />
+      <workItem from="1605695264576" duration="1500000" />
     </task>
     <servers />
   </component>
@@ -194,6 +207,15 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -205,6 +227,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="275" y="42" width="1057" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1604578531392" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1605527273492">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605527273492" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1604572825431">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
