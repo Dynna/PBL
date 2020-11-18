@@ -34,6 +34,7 @@ if (isset($_POST['reg_user'])) {
     $last_name = mysqli_real_escape_string($db, $_POST['last_name']);
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
+    $password1 = mysqli_real_escape_string($db, $_POST['password1']);
     $date_of_birth = mysqli_real_escape_string($db, $_POST['date_of_birth']);
     $nickname = mysqli_real_escape_string($db, $_POST['nickname']);
     $provided_service = mysqli_real_escape_string($db, $_POST['provided_service']);
@@ -79,21 +80,15 @@ if (isset($_POST['reg_user'])) {
         array_push($errors, "Password is required");}
         else{
             $password = test_input($_POST["password"]);
-
-            if (strlen($_POST["password"]) <= '8') {
-                array_push($errors, "Your password must contain al least 8 characters");
-            }
-            if(!preg_match("#[0-9]+#",$password)) {
-                array_push($errors, "Your password must contain at least 1 number");
-            }
-            if(!preg_match("#[A-Z]+#",$password)) {
-                array_push($errors, "Your password must contain at least 1 capital letter");
-            }
-            if(!preg_match("#[a-z]+#",$password)) {
-                array_push($errors, "Your password must contain at least 1 lowercase latter");
+            if (strlen($_POST["password"]) <= '8' || !preg_match("#[0-9]+#",$password) || !preg_match("#[A-Z]+#",$password) || !preg_match("#[a-z]+#",$password)) {
+                array_push($errors, "Your password must contain al least 8 characters, 1 number, 1 capital letter & 1 lower letter.");
             }
         }
-
+    if (empty($password1)) {
+        array_push($errors, "Please confirm your password.");
+    } elseif ($password != $password1) {
+        array_push($errors, "Password don't match.");
+    }
 
     // first check the database to make sure
     // a user does not already exist with the same username and/or email
@@ -116,12 +111,12 @@ if (isset($_POST['reg_user'])) {
         $password = md5($password);//encrypt the password before saving in the database
         $email = md5($email);
 
-        $query = "INSERT INTO account (first_name, last_name, email, date_of_birth, nickname, provided_service, bio ,password)
-  			  VALUES('$first_name','$last_name', '$email', '$date_of_birth', '$nickname', '$provided_service', '$bio' ,'$password')";
+        $query = "INSERT INTO account (first_name, last_name, email, date_of_birth, nickname, provided_service, bio, password, password1)
+  			  VALUES('$first_name','$last_name', '$email', '$date_of_birth', '$nickname', '$provided_service', '$bio' ,'$password', '$password1')";
         mysqli_query($db, $query);
         $_SESSION['nickname'] = $nickname;
         $_SESSION['success'] = "You are now logged in";
-        header('location: welcome.blade.php');
+        header('location: ../welcome.blade.php');
     }
 }
 

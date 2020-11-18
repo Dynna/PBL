@@ -51,6 +51,10 @@
         <input type="password" name="password">
     </div>
     <div class="input-group">
+        <label>Confirm password:</label>
+        <input type="password" name="password1">
+    </div>
+    <div class="input-group">
         <button type="submit" class="btn" name="reg_user">Register</button>
     </div>
     <p>
