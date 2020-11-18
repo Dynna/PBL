@@ -15,17 +15,17 @@ require_once __DIR__ . '/login.blade.php';
 
 session_start();
 
-$nickname = "";
+$email = "";
 $errors = array();
-$db = mysqli_connect('localhost', 'root', '', 'collaid') or die("Connect failed: %s\n". $db -> error);
+$db = mysqli_connect('localhost', 'root', '', 'collaid') or die("Connect failed: %s\n" . $db->error);
 
 //Login
 if (isset($_POST['login_user'])) {
-    $nickname = mysqli_real_escape_string($db, $_POST['nickname']);
+    $email = mysqli_real_escape_string($db, $_POST['email']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
-    if (empty($nickname)) {
-        array_push($errors, "Nickname is required");
+    if (empty($email)) {
+        array_push($errors, "Email is required");
     }
     if (empty($password)) {
         array_push($errors, "Password is required");
@@ -33,13 +33,14 @@ if (isset($_POST['login_user'])) {
 
     if (count($errors) == 0) {
         $password = md5($password);
-        $query = "SELECT * FROM account WHERE nickname='$nickname' AND password='$password'";
+        $email = md5($email);
+        $query = "SELECT * FROM account WHERE email='$email' AND password='$password'";
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
-            $_SESSION['nickname'] = $nickname;
+            $_SESSION['email'] = $email;
             $_SESSION['success'] = "You are now logged in";
-            header('location: welcome.blade.php');
-        }else {
+            header('location: ../welcome.blade.php');
+        } else {
             array_push($errors, "Wrong nickname/password combination");
         }
     }
