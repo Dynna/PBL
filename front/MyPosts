@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/profilepage.css">
     <link rel="stylesheet" href="/dist/css-tooltip.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>My Account | Collaid</title>
+    <title>My Posts | Collaid</title>
 </head>
 <body>
 
@@ -37,7 +37,7 @@
 </header>
 
     <div class="container-main">
-    	<div class="container-position">
+        <div class="container-position">
         <div class="container-profile-menu">
             <div class="menu-avatar">
                 <div class="user-avatar">
@@ -94,10 +94,10 @@
                 <p>View and edit your personal info below.</p>
             </div>
             <div class="section-email">
-            	<div class="info-email"><p>Login Email:</p></div>
-				<div class="email-email"><p>sickofthis@gmail.com&#160;&#160;&#160;&#160;</p>
-					<div class="tooltip">&#x1F6C8;<span class="tooltiptext">Your login email can't be changed.</span></div>
-				</div></div>
+                <div class="info-email"><p>Login Email:</p></div>
+                <div class="email-email"><p>sickofthis@gmail.com&#160;&#160;&#160;&#160;</p>
+                    <div class="tooltip">&#x1F6C8;<span class="tooltiptext">Your login email can't be changed.</span></div>
+                </div></div>
             <div class="section-profile-name">
                 <div class="section-first-name">
                         <label for="firstname">First Name</label>
