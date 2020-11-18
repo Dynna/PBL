@@ -15,8 +15,8 @@ class FeedbackSenderIdFk extends Migration
     {
         Schema::table('feedback', function (Blueprint $table) {
             $table->foreign('sender_id')
-                ->references('account_id')
-                ->on('account')
+                ->references('id')
+                ->on('users')
                 ->onDelete('cascade');
         });
     }

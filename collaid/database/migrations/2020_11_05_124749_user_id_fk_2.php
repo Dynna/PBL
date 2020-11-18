@@ -15,8 +15,8 @@ class UserIdFk2 extends Migration
     {
         Schema::table('agreement_pact', function (Blueprint $table) {
             $table->foreign('user_id_2')
-                ->references('account_id')
-                ->on('account')
+                ->references('id')
+                ->on('users')
                 ->onDelete('cascade');
         });
     }

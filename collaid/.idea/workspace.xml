@@ -20,12 +20,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b380e101-4f54-4c09-b7de-82228265ca6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_18_110351_add_double_password_for_account.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/collaid.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/collaid.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/448ad68b-2905-4af4-b9d6-b98d3068c121.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/448ad68b-2905-4af4-b9d6-b98d3068c121.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login/server_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/server_login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/registration/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/registration/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/registration/server_reg.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/registration/server_reg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Account.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_120215_create_accounts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_120215_create_accounts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_121810_create_agreement_pacts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_121810_create_agreement_pacts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_123530_user_id_fk.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_123530_user_id_fk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_124749_user_id_fk_2.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_124749_user_id_fk_2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_125027_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_125027_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_125220_post_user_id_fk.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_125220_post_user_id_fk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_125402_create_feedback_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_125402_create_feedback_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_125536_feedback_sender_id_fk.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_125536_feedback_sender_id_fk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_125721_feedback_receiver_id_fk.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_125721_feedback_receiver_id_fk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_18_110351_add_double_password_for_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login/server_login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registration/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registration/server_reg.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +185,10 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jqBHsvLTkMZ3KA1dWBmPNf9Roe" />
@@ -166,9 +205,10 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../laravel-login-email-username" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -202,6 +242,7 @@
       <workItem from="1605090247613" duration="14069000" />
       <workItem from="1605527192955" duration="279000" />
       <workItem from="1605695264576" duration="1500000" />
+      <workItem from="1605733244444" duration="6764000" />
     </task>
     <servers />
   </component>
@@ -224,18 +265,27 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="389" y="154" key="#Log_Highlighting_(ideolog)" timestamp="1604581821615">
+    <state x="389" y="154" key="#Log_Highlighting_(ideolog)" timestamp="1605735415937">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="389" y="154" key="#Log_Highlighting_(ideolog)/0.0.1366.768@0.0.1366.768" timestamp="1604581821615" />
+    <state x="389" y="154" key="#Log_Highlighting_(ideolog)/0.0.1366.768@0.0.1366.768" timestamp="1605735415937" />
     <state x="275" y="42" width="1057" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604578531392">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="275" y="42" width="1057" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1604578531392" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1605527273492">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="488" y="65" key="#com.intellij.ide.util.MemberChooser" timestamp="1605736574674">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="488" y="65" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1605736574674" />
+    <state x="428" y="138" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605736232782">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="428" y="138" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1605736232782" />
+    <state x="449" y="108" key="FileChooserDialogImpl" timestamp="1605713342606">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605527273492" />
+    <state x="449" y="108" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1605713342606" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1604572825431">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -244,17 +294,17 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="502" y="106" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1604574576588" />
-    <state x="518" y="307" key="NewPhpFileDialog" timestamp="1605099736130">
+    <state x="518" y="307" key="NewPhpFileDialog" timestamp="1605706436033">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="518" y="307" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1605099736130" />
+    <state x="518" y="307" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1605706436033" />
     <state x="541" y="271" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604579673157">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="541" y="271" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.768@0.0.1366.768" timestamp="1604579673157" />
-    <state x="0" y="0" width="585" height="768" key="find.popup" timestamp="1604572393155">
+    <state x="0" y="0" width="585" height="768" key="find.popup" timestamp="1605735411048">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="0" y="0" width="585" height="768" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1604572393155" />
+    <state x="0" y="0" width="585" height="768" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1605735411048" />
   </component>
 </project>
