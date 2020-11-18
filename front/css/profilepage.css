@@ -97,6 +97,12 @@ a {
     flex-direction:row;
 }
 
+
+/*.space-left{
+    flex:0.9;
+    order:1;
+}*/
+
   
 .container-profile-menu{
     display:flex;
@@ -244,12 +250,6 @@ a {
 }
 
 
-.menu-space {
-    flex: 0.5;
-    order: 2;
-    padding-top: 12px;
-}
-
 
 .menu-choice {
     display: flex;
@@ -261,6 +261,7 @@ a {
     font-size: 17px;
     padding-left: 25px;
     border: 1px #ccc solid;
+    margin-top:15px;
 }
 
 
@@ -315,7 +316,7 @@ a {
     flex: 3;
     order: 3;
     padding-left: 50px;
-    padding-right: 70px;
+    padding-right: 72px;
 }
 
 .section-name {
@@ -487,6 +488,7 @@ label {
     line-height: 1.75em;
     align-items: flex-start;
 }
+
 
 footer {
     height: 80px;
