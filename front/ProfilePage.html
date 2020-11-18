@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/profilepage.css">
+    <link rel="stylesheet" href="/dist/css-tooltip.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Profile</title>
 </head>
@@ -36,7 +37,8 @@
 </header>
 
     <div class="container-main">
-        <div class="space-left"></div>
+    	<div class="container-position">
+<!--         <div class="space-left"></div> -->
         <div class="container-profile-menu">
             <div class="menu-avatar">
                 <div class="user-avatar">
@@ -54,7 +56,7 @@
                             0
                         </div>
                         <div class="user-friends-followers-text">
-                            Followers
+                            <a href="#">Followers</a>
                         </div>
                     </div>
                     <div class="user-friends-following">
@@ -62,7 +64,7 @@
                             0
                         </div>
                         <div class="user-friends-following-text">
-                            Following
+                            <a href="#">Following</a>
                         </div>
                     </div>
                 </div>
@@ -94,9 +96,10 @@
                 <p>View and edit your personal info below.</p>
             </div>
             <div class="section-email">
-                <p>Login Email:</p>
-                <p>sickofthis@gmail.com</p>
-            </div>
+            	<div class="info-email"><p>Login Email:</p></div>
+				<div class="email-email"><p>sickofthis@gmail.com&#160;&#160;&#160;&#160;</p>
+					<div class="tooltip">&#x1F6C8;<span class="tooltiptext">Your login email can't be changed.</span></div>
+				</div></div>
             <div class="section-profile-name">
                 <div class="section-first-name">
                         <label for="firstname">First Name</label>
@@ -129,8 +132,10 @@
                 <button class="save-button">Update Info</button>
             </div>
         </div>
-        <div class="space-right"></div>
+<!--         <div class="space-right"></div> -->
+
     </div>
+</div>
 
     <footer>
     <p>&copy; 2020 by Collaid. Proudly created by Team 'Connected'. </p>
