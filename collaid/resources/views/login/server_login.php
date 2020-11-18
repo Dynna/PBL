@@ -38,7 +38,7 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($results) == 1) {
             $_SESSION['nickname'] = $nickname;
             $_SESSION['success'] = "You are now logged in";
-            header('location: welcome.blade.php');
+            header('location: ../welcome.blade.php');
         }else {
             array_push($errors, "Wrong nickname/password combination");
         }

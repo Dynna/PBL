@@ -8,7 +8,7 @@ header('location: login.blade.php');
 if (isset($_GET['logout'])) {
 session_destroy();
 unset($_SESSION['nickname']);
-header("location: http://localhost/PBL/collaid/resources/views/registration/login.blade.php");
+header("location: http://localhost/PBL/collaid/resources/views/login/login.blade.php");
 }
 ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ header("location: http://localhost/PBL/collaid/resources/views/registration/logi
 <!-- logged in user information -->
     <?php  if (isset($_SESSION['nickname'])) : ?>
     <p>Welcome <strong><?php echo $_SESSION['nickname']; ?></strong></p>
-    <p> <a href="welcome.blade.php?logout='1'" style="color: #ff0000;">logout</a> </p>
+    <p> <a href="../welcome.blade.php?logout='1'" style="color: #ff0000;">logout</a> </p>
     <?php endif ?>
 </div>
 
