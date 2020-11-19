@@ -665,19 +665,19 @@ footer p {
     display: flex;
     flex-direction:column;
     margin-left: 15px;
+    border-bottom: 0.1px solid#f2f2f2;
 }
 
 .friends-container-center-username{
     flex:1;
     order: 1;
-    margin-bottom: 5px;
     font-size: 17px;
     color: rgba(0,0,0,1);
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .friends-container-center-info{
-    flex:1;
+    flex:1.5;
     order: 2;
     font-size: 12px;
     opacity: .8;
