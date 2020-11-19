@@ -639,5 +639,70 @@ footer p {
 /*---------------------------------------------------------------------------------*/
 
 .friends-container{
+    flex:0.2;
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 0.1px solid#f2f2f2;
+}
 
+.friends-container-left{
+    flex:0.5;
+    order: 1;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.friends-container-center{
+    flex:4;
+    order:2;
+    text-align:left;
+    display: flex;
+    flex-direction:column;
+    margin-left: 15px;
+}
+
+.friends-container-center-username{
+    flex:1;
+    order: 1;
+    margin-bottom: 5px;
+    font-size: 17px;
+    color: rgba(0,0,0,1);
+    padding-top: 10px;
+}
+
+.friends-container-center-info{
+    flex:1;
+    order: 2;
+    font-size: 12px;
+    opacity: .8;
+    display: inline!important;
+}
+
+.friends-container-right{
+    flex:0.7;
+    order: 3;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.friends-container-right-button{
+    text-rendering: auto;
+    width: 90px;
+    height: 35px;
+    border: 1px solid;
+    border-color: #AABCBF;
+    background-color: #aabcbf;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.75em;
+    align-items: flex-start;
 }
