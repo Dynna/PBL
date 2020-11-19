@@ -20,6 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b380e101-4f54-4c09-b7de-82228265ca6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_175549_add_email_verified_column_at_in_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_19_184436_add_remember_token_column_to_users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/448ad68b-2905-4af4-b9d6-b98d3068c121.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/448ad68b-2905-4af4-b9d6-b98d3068c121.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,14 +179,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PBL\collaid\resources\views" />
+      <recent name="C:\xampp\htdocs\PBL\collaid\resources\views\login" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\PBL\collaid\resources\views" />
       <recent name="C:\xampp\htdocs\PBL\collaid\resources\views\login" />
       <recent name="C:\xampp\htdocs\PBL\collaid\resources\views\registration" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\PBL\collaid\resources\views" />
-      <recent name="C:\xampp\htdocs\PBL\collaid\resources\views\login" />
     </key>
   </component>
   <component name="RunManager">
@@ -203,6 +210,7 @@
       <workItem from="1605527192955" duration="279000" />
       <workItem from="1605695264576" duration="1500000" />
       <workItem from="1605733244444" duration="8290000" />
+      <workItem from="1605804680980" duration="7458000" />
     </task>
     <servers />
   </component>
