@@ -92,14 +92,14 @@ a {
 /*-------------------------------------------My Account------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
 
-.container-main{
+.container-main, .messages-container{
     display:flex;
     padding-top:100px;
     align-items: center;
     justify-content: center;
 }
 
-.container-position{
+.container-position, .messages-position{
     display:flex;
     width: 75%;
     flex-direction:row;
@@ -107,7 +107,7 @@ a {
 
  /*------------------------Profile menu (Avatar & Menu choices)---------------------------*/ 
 
-.container-profile-menu{
+.container-profile-menu, .messages-menu-container{
     display:flex;
     flex:1.1;
     order:2;
@@ -118,7 +118,7 @@ a {
 
  /*--------Avatar-----------*/ 
 
-.menu-avatar {
+.menu-avatar, .friends-message-list {
     display: flex;
     flex-direction: column;
     flex: 2;
@@ -325,7 +325,7 @@ a {
     padding-right: 72px;
 }
 
-.section-name {
+.section-name, .message-title {
     flex: 0.1;
     order: 1;
     color: #000000;
@@ -725,4 +725,32 @@ footer p {
     font-size: 14px;
     line-height: 1.75em;
     align-items: flex-start;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* ----------------------------------------Messages Page--------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+
+.message-container{
+    display:flex;
+    padding-top:100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-message-container {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    order: 3;
+    padding-left: 50px;
+    padding-right: 72px;
+    border: 1px #ccc solid;
+}
+
+.box-message {
+    display: flex;
+    flex: 1;
+    order: 5;
+    border: 1px #ccc solid;
 }
