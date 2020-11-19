@@ -434,6 +434,26 @@ input[type=text], select {
     box-sizing: border-box;
 }
 
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-sizing: border-box;
+}
+
+.align-pass{
+    display: flex;
+    flex-direction: row;
+}
+
+.visible-pass{
+    margin-top:30px;
+    margin-left:7px;
+}
+
 
 label {
     font-size: 15px;
