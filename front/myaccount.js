@@ -6,3 +6,8 @@ function changePassword() {
       x.type = "password";
     }
   }
+
+
+  function showEditButtons() {
+    document.getElementById("edit-button").style.visibility="hidden";
+  }
