@@ -35,8 +35,8 @@ class UserController extends Controller
                     'last_name' => 'required|string',
                     'email' => 'required|email',
                     'date_of_birth' => 'date',
-                    'provided_service' => 'string',
-                    'past_experience' => 'string'
+                    'provided_service' => 'nullable',
+                    'past_experience' => 'nullable'
                 ]);
             } else {
                 $validate = $request->validate([
@@ -44,8 +44,8 @@ class UserController extends Controller
                     'last_name' => 'required|string',
                     'email' => 'required|email|unique:users',
                     'date_of_birth' => 'date',
-                    'provided_service' => 'string',
-                    'past_experience' => 'string'
+                    'provided_service' => 'nullable',
+                    'past_experience' => 'nullable'
                 ]);
             }
 
