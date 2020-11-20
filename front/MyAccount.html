@@ -23,7 +23,7 @@
                     <ul class="list-menu">
                         <li class="item active"><a  href="Main.html">Home</a></li>
                         <li class="item"><a href="#">Posts</a></li>
-                        <li class="item"><a href="#">Messages</a></li>
+                        <li class="item"><a href="Messages.html">Messages</a></li>
                         <li class="item"><a href="#">Favorites</a></li>
                     </ul>
                 </div>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="user-edit-button">
-                    <button class="edit-button">Edit</button>
+                    <button class="edit-button" id="edit-button" onclick="showEditButtons()">Edit</button>
                 </div>
             </div>
             <div class="menu-choice">
@@ -120,14 +120,15 @@
                     </form>
                 </div>
                 <div class="section-profile-utilities-password">
-                    <label for="password">Password</label>
-                    <form action="/action_page.php">
-                        <input type="text" id="password" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"><br>
+                    <label for="password">Password</label>                   
+                        <form class="align-pass" action="/action_page.php">
+                        <input type="password" id="change-password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"><br>
+                        <input class="visible-pass" type="checkbox" onclick="changePassword()">
                     </form>
                 </div>
             </div>
             <div class="section-save-button">
-                <button class="save-button">Update Info</button>
+                <button type="submit" class="save-button">Update Info</button>
             </div>
         </div>
     </div>
@@ -136,5 +137,6 @@
     <footer>
     <p>&copy; 2020 by Collaid. Proudly created by Team 'Connected'. </p>
 </footer>
+<script src="myaccount.js"></script>
 </body>
 </html>

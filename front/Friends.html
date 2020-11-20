@@ -23,7 +23,7 @@
                     <ul class="list-menu">
                         <li class="item active"><a  href="Main.html">Home</a></li>
                         <li class="item"><a href="#">Posts</a></li>
-                        <li class="item"><a href="#">Messages</a></li>
+                        <li class="item"><a href="Messages.html">Messages</a></li>
                         <li class="item"><a href="#">Favorites</a></li>
                     </ul>
                 </div>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="user-edit-button">
-                    <button class="edit-button">Edit</button>
+                    <button class="edit-button" id="edit-button" onclick="showEditButtons()">Edit</button>
                 </div>
             </div>
             <div class="menu-choice">
@@ -97,7 +97,17 @@
                 <p class="no-friends-container-text">No available friends at the moment.</p>
             </div> -->
             <div class="friends-container">
-                
+                    <div class="friends-container-left">
+                        <img src="http://via.placeholder.com/70x70" style="border-radius:50%" />
+                        <input type="file" id="myfile" style="display:none" />
+                    </div>
+                    <div class="friends-container-center">
+                        <p class="friends-container-center-username">User Name</p>
+                        <p class="friends-container-center-info">Info</p>
+                    </div>
+                    <div class="friends-container-right">
+                        <button class="friends-container-right-button">Follow</button>
+                    </div>
             </div>
         </div>
     </div>
@@ -106,5 +116,6 @@
     <footer>
     <p>&copy; 2020 by Collaid. Proudly created by Team 'Connected'. </p>
 </footer>
+<script src="myaccount.js"></script>
 </body>
 </html>
