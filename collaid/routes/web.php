@@ -33,3 +33,10 @@ Route::get('/logout', function(){
     return Redirect::to("/login")
         ->with('message', array('type' => 'success', 'text' => 'You have successfully logged out'));
 });
+Route::get('/user/{id}', 'UserController@profile')->name('user.profile');
+Route::get('/edit/user/', 'UserController@edit')->name('user.edit');
+Route::post('/edit/user/', 'UserController@update')->name('user.update');
+
+Route::get('/edit/password/user/', 'UserController@passwordEdit')->name('password.edit');
+Route::post('/edit/password/user/', 'UserController@passwordUpdate')->name('password.update');
+
