@@ -9,5 +9,8 @@ function changePassword() {
 
 
   function showEditButtons() {
+    
     document.getElementById("edit-button").style.visibility="hidden";
+
+    
   }
