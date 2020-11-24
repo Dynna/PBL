@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/dist/css-tooltip.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My Account | Collaid</title>
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -87,13 +88,55 @@
             </div>
         </div>
         <div class="service-display">
-            <form id="newPost" action=""></form>
+            <form id="newPost" action="">
+                <h1>Add a new post</h1>
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab">
+                    <div class="post-title">
+                        <input type="text" oninput="this.className" placeholder="Enter the title of your post">
+                    </div>
+                    <!-- <div class="dropdown-category">
+                        <button onclick="dropdownFunction()" class="dropbtn">Category</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <input type="text" placeholder="Search..." id="serchForCategory" onkeyup="filerFunction()">
+                            <ul>
+                                <li class="item-category">Software Development</li>
+                                <li class="item-category">Business</li>
+                                <li class="item-category">Finances and Contability</li>
+                                <li class="item-category">Design and Arts</li>
+                                <li class="item-category">Marketing</li>
+                                <li class="item-category">Medicine</li>
+                                <li class="item-category">Health and Medicine</li>
+                                <li class="item-category">Lifestyle</li>
+                                <li class="item-category">Music</li>
+                                <li class="item-category">Languages and Literature</li>
+                                <li class="item-category">Didactic Activities</li>
+                                <li class="item-category">Personal Development</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                          <a href="#about">About</a>
+                          <a href="#base">Base</a>
+                          <a href="#blog">Blog</a>
+                          <a href="#contact">Contact</a>
+                          <a href="#custom">Custom</a>
+                          <a href="#support">Support</a>
+                          <a href="#tools">Tools</a>
+                        </div>
+                      </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
     <footer>
-    <p>&copy; 2020 by Collaid. Proudly created by Team 'Connected'. </p>
-</footer>
+        <p>&copy; 2020 by Collaid. Proudly created by Team 'Connected'. </p>
+    </footer>
+
 </body>
 </html>
