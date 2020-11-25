@@ -14,9 +14,9 @@ class PostUserIdFk extends Migration
     public function up()
     {
         Schema::table('post', function (Blueprint $table) {
-            $table->foreign('user_id')
-                ->references('account_id')
-                ->on('account')
+            $table->foreign('id')
+                ->references('id')
+                ->on('users')
                 ->onDelete('cascade');
         });
     }

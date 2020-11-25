@@ -14,7 +14,7 @@ class CreateAgreementPactsTable extends Migration
     public function up()
     {
         Schema::create('agreement_pact', function (Blueprint $table) {
-            $table->id('pact_id');
+            $table->id('id');
             $table->unsignedBigInteger('user_id_1');
             $table->unsignedBigInteger('user_id_2');
             $table->longText('content');
@@ -31,7 +31,6 @@ class CreateAgreementPactsTable extends Migration
      */
     public function down()
     {
-       // $table->dropForeign('fk1');
         Schema::dropIfExists('agreement_pact');
     }
 }

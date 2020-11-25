@@ -13,20 +13,18 @@ class CreateAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('account', function (Blueprint $table) {
-            $table->id('account_id');
+        Schema::create('users', function (Blueprint $table) {
+            $table->id('id');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
-            $table->date('date_of_birth');
-            $table->string('nickname');
-            $table->string('provided_service');
-            $table->longText('past_experience');
-            $table->longText('bio');
+            $table->date('date_of_birth')->nullable();
+            $table->string('provided_service')->nullable();
+            $table->longText('past_experience')->nullable();
             $table->string('avatar')->default('default.jpg');
-            $table->string('domain_of_interest_1');
-            $table->string('domain_of_interest_2');
-            $table->string('domain_of_interest_3');
+            $table->string('domain_of_interest_1')->nullable();
+            $table->string('domain_of_interest_2')->nullable();
+            $table->string('domain_of_interest_3')->nullable();
             $table->string('password');
             $table->timestamps();
         });

@@ -14,11 +14,9 @@ class UserIdFk extends Migration
     public function up()
     {
         Schema::table('agreement_pact', function (Blueprint $table) {
-           // $table->integer('user_id_1')->unsigned();
-           // $table->unsignedBigInteger('user_id_1');
             $table->foreign('user_id_1')
-                ->references('account_id')
-                ->on('account')
+                ->references('id')
+                ->on('users')
             ->onDelete('cascade');
         });
     }

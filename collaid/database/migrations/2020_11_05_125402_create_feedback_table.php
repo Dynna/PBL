@@ -14,7 +14,7 @@ class CreateFeedbackTable extends Migration
     public function up()
     {
         Schema::create('feedback', function (Blueprint $table) {
-            $table->id('feedback_id');
+            $table->id('id');
             $table->unsignedBigInteger('sender_id');
             $table->unsignedBigInteger('receiver_id');
             $table->longText('feedback_content');
