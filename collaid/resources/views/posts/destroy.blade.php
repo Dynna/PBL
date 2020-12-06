@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>POST DELETE</h1>
+        <h1>DELETE POST</h1>
         <h1>{{ $post->post_title }}</h1>
         <p class="lead">{{ $post->post_content }}</p>
         <hr>

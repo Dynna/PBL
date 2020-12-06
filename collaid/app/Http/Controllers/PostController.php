@@ -17,8 +17,9 @@ class PostController extends Controller
         return view('posts.index', compact('posts'));
     }
 
-    public function create()
+    public function create(Post $post)
     {
+        $this->authorize('create', $post);
         return view('posts.create');
     }
 
@@ -54,6 +55,7 @@ class PostController extends Controller
 
     public function update(Post $post, Request $request)
     {
+        $this->authorize('update', $post);
         $post->update($request->all());
 
         $request->session()->flash('success', 'Post updated successfully!');

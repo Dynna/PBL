@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>EDIT</h1>
+    @can('update', $post)
+    <h1>EDIT POST</h1>
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -38,8 +39,9 @@
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Edit</button>
             </div>
+
         </div>
 
     </form>
-
+    @endcan
 @endsection

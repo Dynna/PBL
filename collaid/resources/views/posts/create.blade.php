@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>CREATE</h1>
+    <h1>CREATE NEW POST</h1>
+    @can('create', \App\Post::class)
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -12,7 +13,6 @@
             </div>
         </div>
     </div>
-
     <form action="{{ route('posts.store') }}" method="POST">
         @csrf
 
@@ -40,5 +40,6 @@
         </div>
 
     </form>
+    @endcan
 
 @endsection
