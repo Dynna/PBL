@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class PostUserIdFk extends Migration
+class MakeUserIdForeign extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class PostUserIdFk extends Migration
      */
     public function up()
     {
-        Schema::table('post', function (Blueprint $table) {
-            $table->foreign('id')
-                ->references('user_id')
+        Schema::table('posts', function (Blueprint $table) {
+            $table->foreign('user_id')
+                ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
         });
@@ -28,8 +28,8 @@ class PostUserIdFk extends Migration
      */
     public function down()
     {
-        Schema::table('post', function (Blueprint $table) {
-            $table->dropForeign('post_user_id_foreign');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropForeign('posts_user_id_foreign');
         });
     }
 }

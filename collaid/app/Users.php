@@ -13,15 +13,13 @@ class Users extends Authenticatable implements MustVerifyEmail
     protected $fillable = ['first_name', 'last_name', 'email', 'password', 'date_of_birth', 'provided_service',
         'past_experience'];
 
-/*    public function posts(){
-        return $this->hasMany(Post::class);
-    }*/
-
     protected $hidden = ['password', 'remember_token', ];
 
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
 
-
+    public function posts(){
+        return $this->hasMany(Post::class, 'posts_user_id_foreign');
+    }
 }
