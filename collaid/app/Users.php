@@ -20,6 +20,6 @@ class Users extends Authenticatable implements MustVerifyEmail
     ];
 
     public function posts(){
-        return $this->hasMany(Post::class, 'posts_user_id_foreign');
+        return $this->hasMany(Post::class, 'user_id');
     }
 }

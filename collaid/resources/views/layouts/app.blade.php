@@ -43,6 +43,9 @@
             <a class="navbar-brand" href="{{ url('/home') }}">
                 Home
             </a>
+            <a class="navbar-brand" href="{{ url('/posts') }}">
+                Posts
+            </a>
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">

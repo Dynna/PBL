@@ -9,5 +9,6 @@
 
         <a href="{{ route('posts.index') }}" class="btn btn-info">Back to all posts</a>
         <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">Edit post</a>
+        <a href="{{ route('posts.destroy', $post->id) }}" class="btn btn-primary">Delete post</a>
     </div>
 @endsection
