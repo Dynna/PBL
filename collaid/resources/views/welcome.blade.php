@@ -5,7 +5,7 @@
         * {
             margin: 0;
             font-family: 'Raleway', sans-serif;
-            color: black;
+            color: #000000;
             font-size: 16px;
         }
 
@@ -27,88 +27,6 @@
             width: 90%;
 
         }
-
-        .logo {
-            height: 100px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo a {
-            font-size: 2.5em;
-        }
-
-        .nav {
-            height: 85px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav .menu {
-            width: 25%;
-            justify-content: center;
-            align-items: center;
-            margin-left: 36%;
-        }
-
-        .nav ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            font-size: 0.875em;
-        }
-
-        .nav ul a:active {
-            color: rgb(0, 179, 179);
-        }
-
-        .nav ul a:hover {
-            color: rgb(0, 179, 179);
-        }
-
-        .nav .account {
-            margin-left: auto;
-        }
-
-        .login-btn {
-            color: black;
-            border: none;
-            cursor: pointer;
-            background: none;
-        }
-
-        .dropbtn:hover, .login-btn:focus {
-            color: rgb(0, 179, 179);
-        }
-
-        .dropdown-login {
-            position: relative;
-            display: inline-block;
-        }
-
-        .login-content {
-            display: none;
-            position: absolute;
-            min-width: 110px;
-            overflow: auto;
-            box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .login-content a {
-            padding: 12px 16px;
-            display: block;
-            font-size: .9em;
-        }
-
-        .dropdown-login a:hover {
-            color: rgb(0, 179, 179);
-        }
-
-        .show {display: block;}
 
         .welcome {
             height: 355px;
@@ -132,7 +50,7 @@
         }
 
         .welcome p {
-            font-size: 1.25;
+            font-size: 1.2em;
         }
 
         .img-preview {

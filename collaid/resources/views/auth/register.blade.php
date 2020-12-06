@@ -56,7 +56,7 @@
             outline: none;
         }
 
-        .sign-up-button {
+        .sign-button {
             width:100%;
             margin-top: 20px;
             height: 50px;
@@ -66,7 +66,7 @@
             font-weight: 500;
         }
 
-        .sign-up-button:hover {
+        .sign-button:hover {
             color: #ffffff;
         }
     </style>
@@ -129,8 +129,8 @@
                             <input id="password-confirm" type="password" class="form-controller" name="password_confirmation" required autocomplete="new-password">
                         </div>
 
-                        <div>
-                            <button type="submit" class="btn sign-up-button">
+                        <div class="button">
+                            <button type="submit" class="sign-button">
                                 {{ __('Sign Up') }}
                             </button>
                         </div>
