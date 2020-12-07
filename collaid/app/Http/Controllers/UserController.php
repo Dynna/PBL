@@ -81,6 +81,7 @@ class UserController extends Controller
         $validate = $request->validate([
             'oldPassword' => 'required|min:8',
             'password' => 'required|min:8|confirmed',
+            'g-recaptcha-response' => 'required'
         ]);
 
         $user = Users::find(Auth::user()->id);
@@ -110,5 +111,18 @@ class UserController extends Controller
         } else {
             return redirect()->back();
         }
+    }
+
+    public function passwordReset(Request $request) {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:8|confirmed',
+            'g-recaptcha-response' => 'required'
+        ]);
+
+        $user = Users::find(Auth::user()->id);
+        $user->password = Hash::make($request['password']);
+        $user->save();
+     /*   return redirect()->route('/login');*/
     }
 }
