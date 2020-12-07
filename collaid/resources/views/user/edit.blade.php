@@ -17,6 +17,16 @@
                                 </div>
                             @endif
 
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
                             <div class="form-group row">
                                 <label for="first_name" class="col-md-4 col-form-label text-md-right">{{ __('First name') }}</label>
 
@@ -108,7 +118,9 @@
                                     </button>
                                 </div>
                             </div>
-                            <a href="{{ route('password.edit', Auth::user()->id) }}">Change Password</a>
+                            <a href="{{ route('user.profile', Auth::user()->id) }}">Back to profile</a><br>
+                            <a href="{{ route('password.edit', Auth::user()->id) }}">Change Password</a><br>
+                            <a href="{{ route('avatar.edit', Auth::user()->id) }}">Add avatar</a>
                         </form>
                     </div>
                 </div>

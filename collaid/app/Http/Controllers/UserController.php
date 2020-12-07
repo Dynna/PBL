@@ -45,9 +45,26 @@ class UserController extends Controller
                     'email' => 'required|email|unique:users',
                     'date_of_birth' => 'date',
                     'provided_service' => 'nullable',
-                    'past_experience' => 'nullable'
+                    'past_experience' => 'nullable',
+                    'avatar' => 'sometimes|image|mimes:jpg,jpeg,bmp,svg,png|max:5000'
                 ]);
             }
+
+      /*      if (request()->has('avatar')){
+                $avatar_uploaded = request()->file('avatar');
+                $avatar_name = time() . '.' . $avatar_uploaded->getClientOriginalExtension();
+                $avatar_path = public_path('/images/');
+                $avatar_uploaded->move($avatar_path, $avatar_name);
+               Users::add([
+                    'avatar' => '/images/' . $avatar_name
+                ]);
+                return redirect()->back();
+               /* $user->avatar = $request['avatar' => '/images/' . $avatar_name];
+                $user->save();*/
+           /*     $request->session()->flash('success', 'Your profile has been updated successfully!');
+
+                return redirect()->back();*/
+
 
             if($validate) {
                 $user->first_name = $request['first_name'];
@@ -56,6 +73,7 @@ class UserController extends Controller
                 $user->date_of_birth = $request['date_of_birth'];
                 $user->provided_service = $request['provided_service'];
                 $user->past_experience = $request['past_experience'];
+            //    $user->avatar = $request['avatar'];
 
                 $user->save();
                 $request->session()->flash('success', 'Your profile has been updated successfully!');
@@ -113,6 +131,33 @@ class UserController extends Controller
         }
     }
 
+    public function editAvatar() {
+        if(Auth::user()){
+            return view('user.avatar');
+        } else {
+            return redirect()->back();
+        }
+    }
+
+    // to be adjusted
+    public function updateAvatar(Request $request){
+        $request->validate([
+            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $user = Users::find(Auth::user()->id);
+
+        $avatarName = $user->id .'_avatar'.time().'.'.request()->avatar->getClientOriginalExtension();
+        $request->avatar->storeAs('avatars',$avatarName);
+        $user->avatar = $avatarName;
+        $user->save();
+
+        return back()
+            ->with('success','You have successfully upload image.');
+
+    }
+
+    // to be adjusted
     public function passwordReset(Request $request) {
         $request->validate([
             'email' => 'required|email',
@@ -123,6 +168,5 @@ class UserController extends Controller
         $user = Users::find(Auth::user()->id);
         $user->password = Hash::make($request['password']);
         $user->save();
-     /*   return redirect()->route('/login');*/
     }
 }

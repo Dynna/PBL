@@ -40,6 +40,8 @@ Route::post('/edit/password/user/', 'UserController@passwordReset')->name('passw
 
 Route::resource('posts', 'PostController');
 
+Route::get('/edit/avatar/user/', 'UserController@editAvatar')->name('avatar.edit');
+Route::post('/edit/avatar/user/', 'UserController@updateAvatar')->name('avatar.update');
 
 
 

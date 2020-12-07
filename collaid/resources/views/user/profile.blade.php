@@ -7,7 +7,8 @@
         <p>{{$user['date_of_birth']}}</p>
         <p>{{$user['provided_service']}}</p>
         <p>{{$user['past_experience']}}</p>
-
+        <img src="{{asset(Auth::user()->avatar)}}" alt="">
+        <br>
         <a href="{{ route('user.edit', Auth::user()->id) }}">Edit profile</a>
     </div>
 @endsection
