@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Users;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 
 
 class UserController extends Controller
@@ -124,6 +125,7 @@ class UserController extends Controller
     public function profile($id) {
         $user = Users::find($id);
 
+        Log::info('Showing the user profile for user: '.$id);
         if($user) {
             return view('user.profile')->withUser($user);
         } else {
@@ -168,5 +170,6 @@ class UserController extends Controller
         $user = Users::find(Auth::user()->id);
         $user->password = Hash::make($request['password']);
         $user->save();
+        Log::info('Resetting password for user: '.$user->id);
     }
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
@@ -52,8 +53,10 @@ class LoginController extends Controller
             'g-recaptcha-response' => 'required'
         ]);
 
+        $user = Users::find(Auth::user()->id);
         if ($this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
+            Log::info('Login attempt failed for user: '.$user->id);
             return $this->sendLockoutResponse($request);
         }
     }
