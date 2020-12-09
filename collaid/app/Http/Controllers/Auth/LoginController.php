@@ -50,13 +50,13 @@ class LoginController extends Controller
     {
         $request->only('email', 'password');
         $this->validate($request, [
-            'g-recaptcha-response' => 'required'
+            'g-recaptcha-response' => ''
         ]);
 
-        $user = Users::find(Auth::user()->id);
+       // $user = Users::find(Auth::user()->id);
         if ($this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
-            Log::info('Login attempt failed for user: '.$user->id);
+            Log::info('Login attempt failed for user: ');
             return $this->sendLockoutResponse($request);
         }
     }
