@@ -25,6 +25,9 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    protected $maxAttempts = 4;
+    protected $decayMinutes = 1;
+
     /**
      * Where to redirect users after login.
      *
@@ -44,10 +47,14 @@ class LoginController extends Controller
 
     protected function validateLogin(Request $request)
     {
+        $request->only('email', 'password');
         $this->validate($request, [
-            'email' => 'required|email',
-            'password' => 'required|min:8',
             'g-recaptcha-response' => 'required'
         ]);
+
+        if ($this->hasTooManyLoginAttempts($request)) {
+            $this->fireLockoutEvent($request);
+            return $this->sendLockoutResponse($request);
+        }
     }
 }
