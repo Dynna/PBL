@@ -50,7 +50,7 @@ class LoginController extends Controller
     {
         $request->only('email', 'password');
         $this->validate($request, [
-            'g-recaptcha-response' => ''
+            'g-recaptcha-response' => 'required'
         ]);
 
        // $user = Users::find(Auth::user()->id);
