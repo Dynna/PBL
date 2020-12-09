@@ -97,29 +97,54 @@ class UserController extends Controller
     }
 
     public function passwordUpdate(Request $request) {
-        $validate = $request->validate([
-            'oldPassword' => 'required|min:8',
-            'password' => 'required|min:8|confirmed',
-            'g-recaptcha-response' => 'required'
-        ]);
 
-        $user = Users::find(Auth::user()->id);
+        if(Auth::user()){
 
-        if($user){
-            if(Hash::check($request['oldPassword'], $user->password) && $validate) {
+            $validate = $request->validate([
+                'oldPassword' => 'required|min:8',
+                'password' => 'required|min:8|confirmed',
+                'g-recaptcha-response' => 'required'
+            ]);
+
+            $user = Users::find(Auth::user()->id);
+
+            if($user){
+                if(Hash::check($request['oldPassword'], $user->password) && $validate) {
+                    $user->password = Hash::make($request['password']);
+
+                    $user->save();
+
+                    $request->session()->flash('success', 'Your password has been changed successfully!');
+
+                    return redirect()->back();
+                } else {
+                    $request->session()->flash('error', 'The entered password does not match your current password!');
+
+                    return redirect()->route('password.edit');
+                }
+            }
+        } else {
+            $validate = $request->validate([
+                'password' => 'required|min:8|confirmed',
+                'g-recaptcha-response' => 'required'
+            ]);
+
+            $email =$request->input('email');
+            $user = Users::where('email',$email)->first();
+
+            if($validate) {
                 $user->password = Hash::make($request['password']);
 
                 $user->save();
 
                 $request->session()->flash('success', 'Your password has been changed successfully!');
 
-                return redirect()->back();
+                return redirect()->route('login');
             } else {
-                $request->session()->flash('error', 'The entered password does not match your current password!');
-
                 return redirect()->route('password.edit');
             }
         }
+
     }
 
     public function profile($id) {
@@ -160,7 +185,7 @@ class UserController extends Controller
     }
 
     // to be adjusted
-    public function passwordReset(Request $request) {
+   /* public function passwordReset(Request $request) {
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:8|confirmed',
@@ -171,5 +196,5 @@ class UserController extends Controller
         $user->password = Hash::make($request['password']);
         $user->save();
         Log::info('Resetting password for user: '.$user->id);
-    }
+    }*/
 }
