@@ -28,8 +28,8 @@ class PostController extends Controller
        $user = auth()->user();
 
         $this->validate($request, array(
-            'post_title' => 'required',
-            'post_content' => 'required',
+            'post_title' => 'required|regex:/[A-Za-z1-9 ]+/',
+            'post_content' => 'required|regex:/[A-Za-z1-9 ]+/',
         ));
 
         $post = new Post();
