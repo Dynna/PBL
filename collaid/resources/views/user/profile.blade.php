@@ -272,7 +272,7 @@
                 </div>
                 <div class="menu-choice">
                     <ul>
-                        <li><a href="{{ url('/user/{id}') }}">My Account</a></li>
+                        <li><a href="{{ route('user.profile', Auth::user()->id) }}">My Account</a></li>
                         <li><a href="{{ url('/posts/create') }}">Add a new post</a></li>
                         <li><a href="MyPosts.html">My posts</a></li>
                         <li><a href="Friends.html">Friends</a></li>
