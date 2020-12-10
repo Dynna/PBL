@@ -36,9 +36,11 @@ Route::post('/edit/user/', 'UserController@update')->name('user.update');
 
 Route::get('/edit/password/user/', 'UserController@passwordEdit')->name('password.edit');
 Route::post('/edit/password/user/', 'UserController@passwordUpdate')->name('password.update');
-Route::post('/edit/password/user/', 'UserController@passwordReset')->name('password.reset');
+//Route::post('/edit/password/user/', 'UserController@passwordReset')->name('password.reset');
 
 Route::resource('posts', 'PostController');
+Route::get('/posts/{post}', 'PostController@delete')->name('post.delete');
+
 Route::group(['middleware' => ['XSS']], function () {
     Route::get('posts/create', 'PostController@create')->name('posts.create');
     Route::post('posts', 'PostController@store')->name('posts.store');

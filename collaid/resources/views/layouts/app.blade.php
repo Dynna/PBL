@@ -161,7 +161,7 @@
             <div class="menu">
                 <ul class="list-menu">
                     <li class="item active"><a href="{{ url('/home') }}">Home</a></li>
-                    <li class="item"><a href="#">Posts</a></li>
+                    <li class="item"><a href="{{ url('/posts') }}">Posts</a></li>
                     <li class="item"><a href="Messages.html">Messages</a></li>
                     <li class="item"><a href="#">Favorites</a></li>
                 </ul>
