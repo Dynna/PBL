@@ -8,75 +8,218 @@
     <title>Collaid</title>
 
     <!-- Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('user/style.css')}}">
 
     <style>
-        body {
-            font-family: 'Lato';
+        * {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            color: black;
+            font-size: 16px;
         }
-        .fa-btn {
-            margin-right: 6px;
+
+        li {
+            list-style-type: none;
         }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+
+        }
+
+        .logo {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 2.5em;
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav {
+            height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav .menu {
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            margin-left: 36%;
+        }
+
+        .nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 0.875em;
+        }
+
+        .nav ul a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav ul a:hover {
+            color: rgb(0, 179, 179);
+        }
+
+        .login-btn {
+            color: black;
+            border: none;
+            cursor: pointer;
+            background: none;
+        }
+
+        .account-name {
+            color: black;
+            border: none;
+            cursor: pointer;
+            background: none;
+        }
+
+        .dropdown-login {
+            position: relative;
+            display: inline-block;
+        }
+
+        .login-content {
+            display: none;
+            position: absolute;
+            min-width: 110px;
+            overflow: auto;
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .account-name-content {
+            display: none;
+            position: absolute;
+            min-width: 110px;
+            overflow: auto;
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .login-content a {
+            padding: 12px 16px;
+            display: block;
+            font-size: .9em;
+            text-decoration: none;
+            color: black;
+        }
+
+        .account-name-content a {
+            padding: 12px 16px;
+            display: block;
+            font-size: .9em;
+            text-decoration: none;
+            color: black;
+        }
+
+        .dropdown-login a:hover {
+            color: rgb(0, 179, 179);
+        }
+
+        .show {
+            display: block;
+        }
+
+        .nav .account {
+            margin-left: auto;
+        }
+
     </style>
-</head>
+
 <body id="app-layout">
-<nav class="navbar navbar-default">
+
+
+<div class="main-container">
     <div class="container">
-        <div class="navbar-header">
-
-            <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                COLLAID
-            </a>
-            <a class="navbar-brand" href="{{ url('/home') }}">
-                Home
-            </a>
-            <a class="navbar-brand" href="{{ url('/posts') }}">
-                Posts
-            </a>
+        <div class="logo">
+            <div class="logo-preview"><a class="text-logo" href="{{ url('/') }}">COLLAID</a></div>
+        </div>
+        <div class="nav">
+            <div class="menu">
+                <ul class="list-menu">
+                    <li class="item active"><a href="{{ url('/home') }}">Home</a></li>
+                    <li class="item"><a href="#">Posts</a></li>
+                    <li class="item"><a href="Messages.html">Messages</a></li>
+                    <li class="item"><a href="#">Favorites</a></li>
+                </ul>
+            </div>
+            <div class="account">
+                <span></span>
+                <div class="dropdown-login">
+                    @if (Auth::guest())
+                        <button onclick="dropdownFunction()" class="login-btn">Authenticate</button>
+                        <div id="myDropdown" class="login-content">
+                            <a href="{{ url('/login') }}">Sign in</a>
+                            <a href="{{ url('/register') }}">Sign up</a>
+                        </div>
+                    @else
+                        <li>
+                            <button onclick="dropdownFunction2()" class="account-name">
+                                {{ Auth::user()->first_name }} <span class="caret"></span>
+                            </button>
+                            <div id="myDropdown2" class="account-name-content">
+                                <a href="{{ route('user.profile', Auth::user()->id) }}"><i
+                                        class="fa fa-btn fa-user"></i>My account</a>
+                                <a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+                            </div>
+                        </li>
+                    @endif
+                </div>
+            </div>
         </div>
 
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
-                @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->first_name }} <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ route('user.profile', Auth::user()->id) }}"><i class="fa fa-btn fa-user"></i>View profile</a></li>
-                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                        </ul>
-                    </li>
-                @endif
-            </ul>
-        </div>
     </div>
-</nav>
+</div>
+
 
 @yield('content')
+<script>
+    function dropdownFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function dropdownFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.login-btn')) {
+            var dropdowns = document.getElementsByClassName("login-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+</script>
 
 <!-- JavaScripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

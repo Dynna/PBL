@@ -53,13 +53,10 @@ class LoginController extends Controller
             'g-recaptcha-response' => 'required'
         ]);
 
-
+       // $user = Users::find(Auth::user()->id);
         if ($this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
-        }
-
-        if ($this->hasTooManyLoginAttempts($request)) {
-            $this->fireLockoutEvent($request);
+            Log::info('Login attempt failed for user: ');
             return $this->sendLockoutResponse($request);
         }
     }
