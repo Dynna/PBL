@@ -1,82 +1,123 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Change password') }}</div>
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            color: black;
+        }
 
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('password.update') }}">
-                            @csrf
+        .change-psw {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-                            @if(session('success'))
-                                <div class="alert alert-success" role="alert">
-                                    {{session('success')}}
-                                </div>
-                            @endif
+        .change-current-psw {
+            width: 320px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
 
-                            @if(session('error'))
-                                <div class="alert alert-danger" role="alert">
-                                    {{session('error')}}
-                                </div>
-                            @endif
+        .change-psw-text {
+            text-align: center;
+            font-size: 48px;
+        }
 
-                            <div class="form-group row">
-                                <label for="oldPassword" class="col-md-4 col-form-label text-md-right">{{ __('Current Password') }}</label>
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+        }
 
-                                <div class="col-md-6">
-                                    <input id="oldPassword" type="password" class="form-control @error('oldPassword') is-invalid @enderror" name="oldPassword" required autocomplete="new-password">
+        .form-group label {
+            color: black;
+            opacity: 0.8;
+            font-weight: 300;
+            font-size: 18px;
+        }
 
-                                    @error('oldPassword')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
+        .form-controller {
+            width: 100%;
+            border: none;
+            border-bottom: 1px  solid;
+        }
 
-                            <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('New Password') }}</label>
+        .form-controller:focus {
+            outline: none;
+        }
 
-                                <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+        .change-btn {
+            width:100%;
+            margin-top: 20px;
+            height: 50px;
+            border: none;
+            background-color: #AABCBF;
+            color: #808080;
+            font-weight: 500;
+        }
 
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                </div>
-                            </div>
-
-                            @if(env('GOOGLE_RECAPTCHA_KEY'))
-                                <div class="g-recaptcha"
-                                     data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}">
-                                </div>
-                            @endif
-
-                            <div class="form-group row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Change') }}
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+        .change-btn:hover {
+            color: #ffffff;
+        }
+    </style>
+    <div class="change-psw">
+        <div class="change-current-psw">
+            <div class="change-psw-text">
+                <h1>Change password</h1>
             </div>
+            <form method="POST" action="{{ route('password.update') }}">
+                @csrf
+
+                @if(session('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{session('success')}}
+                    </div>
+                @endif
+
+                @if(session('error'))
+                    <div class="alert alert-danger" role="alert">
+                        {{session('error')}}
+                    </div>
+                @endif
+
+                <div class="form-group">
+                    <label for="oldPassword">{{ __('Current Password') }}</label>
+
+                    <input id="oldPassword" type="password" class="form-controller @error('oldPassword') is-invalid @enderror" name="oldPassword" required autocomplete="new-password">
+
+                    @error('oldPassword')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+
+                <div class="form-group ">
+                    <label for="password">{{ __('New Password') }}</label>
+
+                    <input id="password" type="password" class="form-controller @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="password-confirm">{{ __('Confirm Password') }}</label>
+
+                    <input id="password-confirm" type="password" class="form-controller" name="password_confirmation" required autocomplete="new-password">
+                </div>
+
+                <div class="change-button">
+                    <button type="submit" class="change-btn">
+                        {{ __('Change') }}
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
-<script src='https://www.google.com/recaptcha/api.js'></script>
 @endsection

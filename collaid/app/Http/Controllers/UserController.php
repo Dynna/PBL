@@ -97,8 +97,7 @@ class UserController extends Controller
     }
 
     public function passwordUpdate(Request $request) {
-
-        if(Auth::user()){
+        if(Auth::user()) {
 
             $validate = $request->validate([
                 'oldPassword' => 'required|min:8',
@@ -108,14 +107,13 @@ class UserController extends Controller
 
             $user = Users::find(Auth::user()->id);
 
-            if($user){
-                if(Hash::check($request['oldPassword'], $user->password) && $validate) {
+            if ($user) {
+                if (Hash::check($request['oldPassword'], $user->password) && $validate) {
                     $user->password = Hash::make($request['password']);
 
                     $user->save();
 
                     $request->session()->flash('success', 'Your password has been changed successfully!');
-
                     return redirect()->back();
                 } else {
                     $request->session()->flash('error', 'The entered password does not match your current password!');
@@ -138,13 +136,11 @@ class UserController extends Controller
                 $user->save();
 
                 $request->session()->flash('success', 'Your password has been changed successfully!');
-
                 return redirect()->route('login');
             } else {
                 return redirect()->route('password.edit');
             }
         }
-
     }
 
     public function profile($id) {
@@ -184,17 +180,4 @@ class UserController extends Controller
 
     }
 
-    // to be adjusted
-   /* public function passwordReset(Request $request) {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|min:8|confirmed',
-            'g-recaptcha-response' => 'required'
-        ]);
-
-        $user = Users::find(Auth::user()->id);
-        $user->password = Hash::make($request['password']);
-        $user->save();
-        Log::info('Resetting password for user: '.$user->id);
-    }*/
 }

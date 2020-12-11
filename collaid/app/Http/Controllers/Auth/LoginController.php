@@ -53,11 +53,6 @@ class LoginController extends Controller
             'g-recaptcha-response' => 'required'
         ]);
 
-
-        if ($this->hasTooManyLoginAttempts($request)) {
-            $this->fireLockoutEvent($request);
-        }
-
         if ($this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
             return $this->sendLockoutResponse($request);

@@ -10,13 +10,12 @@
             <h3>{{ $post->post_title }}</h3>
             <p>{{ $post->post_content}}</p>
             <p>
-                {{--<a href="{{ route('posts.show', $post->id) }}" class="btn btn-info">View post</a>--}}
+              {{--  <a href="{{ route('posts.show', $post->id) }}" class="btn btn-info">View post</a>--}}
                 @can('update', $post)
                 <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">Edit post</a>
-
-                    <a href="{{ route('post.delete', $post->id) }}">
+                <a href="{{ route('post.delete', $post->id) }}">
                         <button type="button" class="btn btn-danger btn-sm">Delete Post</button>
-                    </a>
+                </a>
                 @endcan
             </p>
             <hr>

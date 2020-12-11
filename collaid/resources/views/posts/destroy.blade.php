@@ -13,7 +13,7 @@
             <a href="{{ route('posts.index') }}" class="btn btn-info">Back to all posts</a>
         </div>
         <div class="col-md-6 text-right">
-            <form action="{{ route('posts.destroy',$post->id) }}" method="GET">
+            <form action="{{ route('posts.destroy',$post->id) }}" method="DELETE">
                 <input name="_method" type="hidden" value="DELETE">
                 @csrf
 
