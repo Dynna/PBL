@@ -20,6 +20,7 @@ class PostController extends Controller
     public function create(Post $post)
     {
         $this->authorize('create', $post);
+
         return view('posts.create');
     }
 
@@ -38,7 +39,6 @@ class PostController extends Controller
         $post->user_id = $user->id;
         $post->save();
 
-       // return redirect()->route('posts.show', $post->id);
         return redirect()->route('posts.index')
             ->with('success','Post created successfully!');
     }
@@ -59,7 +59,7 @@ class PostController extends Controller
         $post->update($request->all());
 
         $request->session()->flash('success', 'Post updated successfully!');
-        return redirect()->route('posts.show', $post);
+        return redirect()->route('posts.index', $post);
     }
 
     public function delete($id)

@@ -101,7 +101,7 @@ class UserController extends Controller
 
             $validate = $request->validate([
                 'oldPassword' => 'required|min:8',
-                'password' => 'required|min:8|confirmed',
+                'password' => 'required|min:8|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/',
                 'g-recaptcha-response' => 'required'
             ]);
 
