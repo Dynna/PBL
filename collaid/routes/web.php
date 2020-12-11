@@ -49,6 +49,9 @@ Route::group(['middleware' => ['XSS']], function () {
 Route::get('/edit/avatar/user/', 'UserController@editAvatar')->name('avatar.edit');
 Route::post('/edit/avatar/user/', 'UserController@updateAvatar')->name('avatar.update');
 
+Route::get('/admin', 'AdminController@admin')
+    ->middleware('is_admin')
+    ->name('admin');
 
 
 
