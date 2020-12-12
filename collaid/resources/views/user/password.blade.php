@@ -67,6 +67,17 @@
             <div class="change-psw-text">
                 <h1>Change password</h1>
             </div>
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <form method="POST" action="{{ route('password.update') }}">
                 @csrf
 
@@ -84,32 +95,17 @@
 
                 <div class="form-group">
                     <label for="oldPassword">{{ __('Current Password') }}</label>
-
-                    <input id="oldPassword" type="password" class="form-controller @error('oldPassword') is-invalid @enderror" name="oldPassword" required autocomplete="new-password">
-
-                    @error('oldPassword')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
+                    <input id="oldPassword" type="password" class="form-controller @error('oldPassword') is-invalid @enderror" name="oldPassword" autocomplete="new-password">
                 </div>
 
                 <div class="form-group ">
                     <label for="password">{{ __('New Password') }}</label>
-
-                    <input id="password" type="password" class="form-controller @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                    @error('password')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
+                    <input id="password" type="password" class="form-controller @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
                 </div>
 
                 <div class="form-group">
                     <label for="password-confirm">{{ __('Confirm Password') }}</label>
-
-                    <input id="password-confirm" type="password" class="form-controller" name="password_confirmation" required autocomplete="new-password">
+                    <input id="password-confirm" type="password" class="form-controller" name="password_confirmation" autocomplete="new-password">
                 </div>
 
                 <div class="change-button">
