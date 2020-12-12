@@ -101,8 +101,6 @@
             </p>
             <h6>posted by on {{ $post->created_at }}</h6>
 
-            <hr>
-
         @endforeach
         </div>
     </div>
