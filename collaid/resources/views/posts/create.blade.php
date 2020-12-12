@@ -275,7 +275,7 @@
                         </div>
                     </div>
                     <div class="user-name">
-                        {{--                        <p>{{$user['first_name']}} {{$user['last_name']}}</p>--}}
+                        <p>{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</p>
                     </div>
                     <div class="user-friends">
                         <div class="user-friends-followers">

@@ -47,6 +47,8 @@ Route::group(['middleware' => ['XSS']], function () {
     Route::post('posts/{post} ', 'PostController@update')->name('posts.update');
 });
 
+Route::get('myposts', 'PostController@personal')->name('myposts.index');
+
 Route::get('/edit/avatar/user/', 'UserController@editAvatar')->name('avatar.edit');
 Route::post('/edit/avatar/user/', 'UserController@updateAvatar')->name('avatar.update');
 

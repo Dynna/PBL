@@ -17,6 +17,13 @@ class PostController extends Controller
         return view('posts.index', compact('posts'));
     }
 
+    public function personal()
+    {
+        $items = Post::where('user_id', Auth::user()->id)->orderBy('id','DESC')->with('user')->paginate(5);
+
+        return view('myposts.index', compact('items'));
+    }
+
     public function create(Post $post)
     {
         $this->authorize('create', $post);
