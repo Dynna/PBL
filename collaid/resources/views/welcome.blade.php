@@ -172,7 +172,7 @@
                     <div data-aos="fade-in" data-aos-offset="300" data-aos-delay="60" class="block">
                         <div class="text">
                             <h2>WHO WE ARE</h2>
-                            <h4>The Leading Media Startup</h3>
+                            <h4>The Leading Media Startup</h4>
                                 <p>We’re a young and talented group of entrepreneurs and engineers with a groundbreaking idea designed to contribute towards a better tomorrow. We provide smart solutions for companies of all sizes and pride ourselves on our unparalleled, dedicated service. At Collaid, we believe that the right understanding and technological edge can lead companies towards a successful future. Contact us today to set up a meeting with one of our sales representatives.</p>
                         </div>
                     </div>
