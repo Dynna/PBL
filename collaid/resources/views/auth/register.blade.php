@@ -125,8 +125,20 @@
             list-style-type: disc;
         }
 
-        span {
-            font-weight: bold;
+        .tooltip {
+            background-color:#000;
+            border:1px solid #fff;
+            padding:10px 15px;
+            width:200px;
+            h
+            display:none;
+            color:#fff;
+            text-align:left;
+            font-size:12px;
+
+            /* outline radius for mozilla/firefox only */
+            -moz-box-shadow:0 0 10px #000;
+            -webkit-box-shadow:0 0 10px #000;
         }
 
     </style>
@@ -175,8 +187,7 @@
 
                 <div class="form-group">
                     <label for="password">{{ __('Password') }}</label>
-                    <input id="password" type="password" class="form-controller @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
-
+                    <input id="password" type="password" class="input-psw form-controller @error('password') is-invalid @enderror" name="password" autocomplete="new-password" title="Should contain at least 1 Uppercase, 1 lowercase, 1 digit & 1 special character">
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -440,8 +451,6 @@
 
                 </div>
 
-
-
                 @if(env('GOOGLE_RECAPTCHA_KEY'))
                     <div class="g-recaptcha"
                          data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}">
@@ -485,6 +494,18 @@
                 modal.style.display = "none";
             }
         }
+
+        $("#password :input").tooltip({
+
+            position: "center right",
+
+            offset: [-2, 10],
+
+            effect: "fade",
+
+            opacity: 0.7
+
+        });
 
     </script>
 @endsection

@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="663270bc-78f0-4d22-917d-61a93f0a6d38" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ffbec87c-bc00-48eb-ae66-7ab0bb8ed380.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ffbec87c-bc00-48eb-ae66-7ab0bb8ed380.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collaid/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/collaid/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collaid/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/collaid/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collaid/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/collaid/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collaid/resources/views/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/collaid/resources/views/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collaid/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/collaid/resources/views/auth/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +146,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lWuodUdnpubF11jXPmztpwOZOI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -179,7 +176,8 @@
       <option name="presentableId" value="Default" />
       <updated>1607725346821</updated>
       <workItem from="1607725349062" duration="1167000" />
-      <workItem from="1607729853403" duration="2569000" />
+      <workItem from="1607729853403" duration="14624000" />
+      <workItem from="1607771890095" duration="1783000" />
     </task>
     <servers />
   </component>
