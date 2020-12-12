@@ -74,37 +74,30 @@
     </style>
 
     <div class="container-main">
-    <div class="container-position">
-        <div class="posts-handing">
-        @can('create', \App\Post::class)
-            <h1>POSTS</h1>
-            <a href="{{ route('posts.create') }}" class="new-post-btn">New Post</a>
-        @endcan
-        </div>
-        <div class="posts-list">
-        @foreach($posts as $post)
-            <div class="post">
-            <h3>{{ $post->post_title }}</h3>
-            <p>{{ $post->post_content}}</p>
-            <p>
-
-                @can('update', $post)
-                <a href="{{ route('posts.edit', $post->id) }}">
-                    <button type="button" class="edit-btn">Edit</button>
-                </a>
-                <a href="{{ route('post.delete', $post->id) }}">
-                        <button type="button" class="delete-btn">Delete</button>
-                </a>
-
+        <div class="container-position">
+            <div class="posts-handing">
+                @can('create', \App\Post::class)
+                <h1>POSTS</h1>
+                <a href="{{ route('posts.create') }}" class="new-post-btn">New Post</a>
                 @endcan
-
-            </p>
-            <h6>posted by on {{ $post->created_at }}</h6>
-
-            <hr>
-
-        @endforeach
+            </div>
+            <div class="posts-list">
+             @foreach($posts as $post)
+                <div class="post">
+                    <h3>{{ $post->post_title }}</h3>
+                    <p>{{ $post->post_content}}</p>
+                    @can('update', $post)
+                    <a href="{{ route('posts.edit', $post->id) }}">
+                        <button type="button" class="edit-btn">Edit</button>
+                    </a>
+                    <a href="{{ route('post.delete', $post->id) }}">
+                        <button type="button" class="delete-btn">Delete</button>
+                    </a>
+                    @endcan
+                    <h6>posted by {{ $post->user->first_name }} {{ $post->user->last_name }} on {{ $post->created_at }}</h6>
+                    @endforeach
+                </div>
+             </div>
         </div>
-    </div>
     </div>
 @endsection

@@ -243,7 +243,7 @@
         <div class="main-container">
             <div class="container">
                 <div class="img-preview">
-                    <img src="{{('../assets/img1.jpg')}}">
+                    <img src="C:\xampp\htdocs\PBL\collaid\public\images\myimage.jpg">
                 </div>
             </div>
         </div>
