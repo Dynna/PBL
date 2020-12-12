@@ -150,49 +150,46 @@
                     <a href="{{ url('/login') }}">Sign in</a>
                 </p>
             </div>
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <form method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class="form-group">
                     <label for="first_name">{{ __('First name') }}</label>
                     <input id="first_name" type="text" class="form-controller @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" autocomplete="first_name" autofocus>
-
-                    @error('first_name')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label for="last_name">{{ __('Last name') }}</label>
                     <input id="last_name" type="text" class="form-controller @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" autocomplete="last_name" autofocus>
-
-                    @error('last_name')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
                 </div>
 
                 <div class="form-group ">
                     <label for="email">{{ __('Email') }}</label>
                     <input id="email" type="email" class="form-controller @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
-
-                    @error('email')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label for="password">{{ __('Password') }}</label>
+<<<<<<< HEAD
                     <input id="password" type="password" class="input-psw form-controller @error('password') is-invalid @enderror" name="password" autocomplete="new-password" title="Should contain at least 1 Uppercase, 1 lowercase, 1 digit & 1 special character">
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                     @enderror
+=======
+                    <input id="password" type="password" class="form-controller @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
+>>>>>>> 9451585270e6595212e51a33227e2b64cab2d9ff
                 </div>
 
                 <div class="form-group">
@@ -201,7 +198,7 @@
                 </div>
 
                 <div class="license-agreement">
-                    <input type="checkbox" id="agreement-check" name="agreement-checking" value="agreement" required>
+                    <input type="checkbox" id="agreement-check" name="agreement-checking" value="agreement">
                     <label>I agree to the </label>
                     <button id="agreePolicesBtn">Terms and Conditions</button>
                 </div>

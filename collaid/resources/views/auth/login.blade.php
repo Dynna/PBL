@@ -96,29 +96,28 @@
                     <a href="{{ url('/register') }}">Sign Up</a>
                 </p>
             </div>
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
                 <div class="form-group">
                     <label for="email">{{ __('E-Mail Address') }}</label>
-                    <input id="email" type="email" class="form-controller @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                    @error('email')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
+                    <input id="email" type="email" class="form-controller @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
                 </div>
 
                 <div class="form-group">
                     <label for="password">{{ __('Password') }}</label>
-                    <input id="password" type="password" class="form-controller @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                    @error('password')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
+                    <input id="password" type="password" class="form-controller @error('password') is-invalid @enderror" name="password" autocomplete="current-password">
                 </div>
 
                 <div class="form-group">

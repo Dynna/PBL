@@ -80,7 +80,6 @@
                 <h1>POSTS</h1>
                 <a href="{{ route('posts.create') }}" class="new-post-btn">New Post</a>
                 @endcan
-<<<<<<< HEAD
             </div>
             <div class="posts-list">
              @foreach($posts as $post)
@@ -99,13 +98,8 @@
                     @endforeach
                 </div>
              </div>
-=======
 
             </p>
-            <h6>posted by on {{ $post->created_at }}</h6>
-
-        @endforeach
->>>>>>> 93554f12f7c455ba4079754fefbb7dc2d4f38058
         </div>
     </div>
 @endsection

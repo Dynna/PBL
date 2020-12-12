@@ -299,6 +299,16 @@
                     <p>View and edit your personal info below.</p>
                 </div>
 
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <div class="info-container-container">
                     <form method="POST" action="{{ route('user.update') }}">
                         @csrf
@@ -313,36 +323,18 @@
                                     <label for="first_name">{{ __('First name') }}</label>
 
                                     <input id="first_name" value="{{$user['first_name']}}" type="text" class="form-controller @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" autocomplete="first_name">
-
-                                    @error('first_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
                                 </div>
 
                                 <div class="form-group">
                                     <label for="email">{{ __('E-Mail Address') }}</label>
 
                                     <input id="email" value="{{$user['email']}}" type="email" class="form-controller @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
-
-                                    @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
                                 </div>
 
                                 <div class="form-group">
                                     <label for="provided_service">{{ __('Main job you offer') }}</label>
 
                                     <input id="provided_service" value="{{$user['provided_service']}}" type="text" class="form-controller @error('provided_service') is-invalid @enderror" name="provided_service">
-
-                                    @error('provided_service')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
                                 </div>
                             </div>
 
@@ -351,36 +343,18 @@
                                     <label for="last_name">{{ __('Last name') }}</label>
 
                                     <input id="last_name" value="{{$user['last_name']}}" type="text" class="form-controller @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" autocomplete="last_name">
-
-                                    @error('last_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
                                 </div>
 
                                 <div class="form-group">
                                     <label for="date_of_birth">{{ __('Birthday') }}</label>
 
                                     <input id="date_of_birth" value="{{$user['date_of_birth']}}" type="date" class="form-controller @error('date_of_birth') is-invalid @enderror" name="date_of_birth">
-
-                                    @error('date_of_birth')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
                                 </div>
 
                                 <div class="form-group">
                                     <label for="past_experience">{{ __('Past experience') }}</label>
 
                                     <input id="past_experience" value="{{$user['past_experience']}}" type="text" class="form-controller @error('past_experience') is-invalid @enderror" name="past_experience">
-
-                                    @error('past_experience')
-                                    <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                                </span>
-                                    @enderror
                                 </div>
                             </div>
                         </div>

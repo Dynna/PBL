@@ -324,6 +324,16 @@
                         </div>
                     </div>
 
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     <form action="{{ route('posts.update',$post->id) }}" method="POST">
                         @csrf
                         @method('PUT')
@@ -331,16 +341,6 @@
                         @if(session('success'))
                             <div class="alert alert-success" role="alert">
                                 {{session('success')}}
-                            </div>
-                        @endif
-
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
                             </div>
                         @endif
 
@@ -359,8 +359,6 @@
                                 <button type="submit" class="save-button">Update</button>
                             </div>
                         </div>
-
-
                     </form>
                 @endcan
 
